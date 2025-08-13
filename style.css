@@ -97,3 +97,92 @@ button img{
     text-align: center;
     font-weight: 500;
 }
+
+/* responsiveness */
+/* ...existing code... */
+
+@media screen and (max-width: 740px) {
+    .card {
+        width: 98%;
+        max-width: 98vw;
+        padding: 20px 10px;
+        margin: 40px auto 0;
+    }
+
+    .search input {
+        font-size: 16px;
+        /* padding: 20px 15px; */
+        height: 25px;
+        margin-top: 20px;
+        /* margin-right: 5px; */
+    }
+
+    .search button {
+        margin-top: 20px;
+        width: 35px;
+        height: 35px;
+    }
+
+    .search button img{
+        width: 20px;
+    height: 20px;
+    }
+
+    .weather-details {
+        padding: 40px 0 20px 0;
+    }
+
+    .weather-details .sun {
+        height: 120px;
+        width: 120px;
+    }
+
+    .weather-details .details {
+        flex-direction: column;
+        padding-top: 30px;
+    }
+
+    .details .col {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+    }
+
+    .col img {
+        height: 50px;
+        margin-bottom: 10px;
+    }
+
+    .col div p {
+        font-size: 18px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+}
+
+/* Extra small devices */
+@media screen and (max-width: 480px) {
+    .card {
+        padding: 10px 2px;
+        margin: auto ;
+    }
+
+    .weather-details .sun {
+        height: 80px;
+        width: 80px;
+    }
+
+    h1 {
+        font-size: 1.2rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+}
+/* ...existing code... */
