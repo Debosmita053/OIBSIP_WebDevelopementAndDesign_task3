@@ -76,25 +76,36 @@ button img{
     width: 200px;
 }
 
-.weather-details .details{
+.weather-details h1{
+    font-size: 80px;
+    font-weight: 500;
+}
+
+.weather-details h2{
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.details{
 
     padding-top: 50px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
+    margin-top: -10px;
 }
 
-.details .col{
+/* .details .col{
     flex-basis: 50%;
-}
+} */
 
 .col{
 
     display: flex;
     align-items: center;
     /* justify-content: space-around; */
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     text-align: left;
 }
 
@@ -111,6 +122,10 @@ button img{
     font-weight: 500;
 }
 
+.humidity , .wind{
+    font-size: 25px;
+    margin-top: -6px;
+}
 /* responsiveness */
 /* ...existing code... */
 
