@@ -106,7 +106,7 @@ button img{
         width: 98%;
         max-width: 98vw;
         padding: 20px 10px;
-        margin: 40px auto 0;
+        margin: 50px auto;
     }
 
     .search input {
@@ -137,15 +137,12 @@ button img{
         width: 120px;
     }
 
-    .weather-details .details {
+    /* .weather-details .details {
         flex-direction: column;
         padding-top: 30px;
-    }
+    } */
 
-    .details .col {
-        flex-basis: 100%;
-        margin-bottom: 20px;
-    }
+    
 
     .col img {
         height: 50px;
@@ -169,7 +166,7 @@ button img{
 @media screen and (max-width: 480px) {
     .card {
         padding: 10px 2px;
-        margin: auto ;
+        margin: 50px auto ;
     }
 
     .weather-details .sun {
