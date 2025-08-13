@@ -81,7 +81,7 @@ button img{
     padding-top: 50px;
     display: flex;
     align-items: center;
-    /* justify-content: space-evenly; */
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 
@@ -89,10 +89,19 @@ button img{
     flex-basis: 50%;
 }
 
+.col{
+
+    display: flex;
+    align-items: center;
+    /* justify-content: space-around; */
+    flex-wrap: wrap;
+    text-align: left;
+}
+
 .col img{
-    height: 80px;
+    height: 30px;
     /* width:50px; */
-    margin-bottom: 20px;
+    margin-right: 20px;
 }
 
 .col div p{
