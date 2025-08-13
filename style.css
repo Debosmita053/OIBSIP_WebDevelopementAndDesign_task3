@@ -58,3 +58,42 @@ button img{
     width: 20px;
 
 }
+
+/* main */
+
+.weather-details{
+
+    padding: 100px 0;
+}
+
+.weather-details .sun{
+
+    height: 200px;
+    width: 200px;
+}
+
+.weather-details .details{
+
+    padding-top: 50px;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-evenly; */
+    flex-wrap: wrap;
+}
+
+.details .col{
+    flex-basis: 50%;
+}
+
+.col img{
+    height: 80px;
+    /* width:50px; */
+    margin-bottom: 20px;
+}
+
+.col div p{
+
+    font-size: 25px;
+    text-align: center;
+    font-weight: 500;
+}
