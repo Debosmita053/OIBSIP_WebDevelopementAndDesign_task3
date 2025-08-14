@@ -25,6 +25,41 @@ body {
     padding: 30px 40px;
 }
 
+.temp{
+    
+    margin-bottom: 50px;
+    /* padding-left: 20px; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+.celsius,.fahrenheit{
+    flex-basis: 50%;
+}
+
+.celsius h3, .fahrenheit h3 {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.celsius h3::after, .fahrenheit h3::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px; /* distance from text */
+    width: 0%;
+    height: 2px;
+    background-color: #cbeee5; /* underline color */
+    transition: width 0.3s ease;
+}
+
+.celsius h3:hover::after, .fahrenheit h3:hover::after {
+    width: 100%;
+}
+
 
 .card .search{
 
