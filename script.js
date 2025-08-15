@@ -1,6 +1,39 @@
-fahrenheit=document.querySelector(".fahrenheit");
-celsius=document.querySelector(".celsius");
-temperature=document.querySelector(".temperature")
+let fahrenheit=document.querySelector(".fahrenheit");
+let celsius=document.querySelector(".celsius");
+let temperature=document.querySelector(".temperature")
+let humidity=document.querySelector(".humidity");
+let wind=document.querySelector(".wind");
+
+// weather api
+
+const api="68f5848c7456d96249ab14704301f015";
+const apiURL="https://api.openweathermap.org/data/2.5/weather?units=metric&q=berlin";
+
+async function checkWeather() {
+    
+    const response=await fetch(apiURL + `&appid=${api}`);
+
+    let data=await response.json();
+    console.log(data);
+
+    document.querySelector(".city").innerHTML=data.name;
+    temperature.innerHTML=Math.round(data.main.temp)+"°C";
+    humidity.innerHTML=data.main.humidity+"%";
+    wind.innerHTML=data.wind.speed+"km/h";
+
+
+
+
+}
+
+checkWeather();
+
+
+
+// conversion
+
+
+
 let curtemp=temperature.innerHTML;
 let iscel=true;
 
@@ -22,5 +55,3 @@ celsius.addEventListener("click",function(event){
         iscel=true;
     }
 })
-
-
