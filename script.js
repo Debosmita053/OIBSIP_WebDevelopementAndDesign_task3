@@ -4,14 +4,18 @@ let temperature=document.querySelector(".temperature")
 let humidity=document.querySelector(".humidity");
 let wind=document.querySelector(".wind");
 
+
+let searchBox=document.querySelector/(".search input");
+let searchBtn=document.querySelector/(".search button")
+
 // weather api
 
 const api="68f5848c7456d96249ab14704301f015";
 const apiURL="https://api.openweathermap.org/data/2.5/weather?units=metric&q=berlin";
 
-async function checkWeather() {
+async function checkWeather(city) {
     
-    const response=await fetch(apiURL + `&appid=${api}`);
+    const response=await fetch(apiURL + city +`&appid=${api}`);
 
     let data=await response.json();
     console.log(data);
@@ -21,12 +25,14 @@ async function checkWeather() {
     humidity.innerHTML=data.main.humidity+"%";
     wind.innerHTML=data.wind.speed+"km/h";
 
-
-
-
 }
 
-checkWeather();
+searchBtn.addEventListener("click",function(event){
+
+    checkWeather();
+
+})
+
 
 
 
