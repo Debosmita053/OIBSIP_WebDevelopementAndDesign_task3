@@ -7,7 +7,7 @@ let wind=document.querySelector(".wind");
 
 let searchBox=document.querySelector(".search input");
 let searchBtn=document.querySelector(".search button");
-
+let curtemp;
 // weather api
 
 const api="68f5848c7456d96249ab14704301f015";
@@ -19,11 +19,13 @@ async function checkWeather(city) {
 
     let data=await response.json();
     console.log(data);
-
+     curtemp=data.main.temp;
     document.querySelector(".city").innerHTML=data.name;
     temperature.innerHTML=Math.round(data.main.temp)+"°C";
     humidity.innerHTML=data.main.humidity+"%";
     wind.innerHTML=data.wind.speed+"km/h";
+
+    
 
 }
 
@@ -40,7 +42,7 @@ searchBtn.addEventListener("click",function(event){
 
 
 
-let curtemp=temperature.innerHTML;
+
 let iscel=true;
 
 fahrenheit.addEventListener("click",function(event){
@@ -57,7 +59,7 @@ celsius.addEventListener("click",function(event){
     
     if(!iscel)
     {
-        temperature.innerHTML=curtemp ;
+        temperature.innerHTML=Math.round(curtemp) +"°C";
         iscel=true;
     }
 })
