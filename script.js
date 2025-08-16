@@ -8,6 +8,8 @@ let wind=document.querySelector(".wind");
 let searchBox=document.querySelector(".search input");
 let searchBtn=document.querySelector(".search button");
 let curtemp;
+
+let weathericon=document.querySelector(".weather");
 // weather api
 
 const api="68f5848c7456d96249ab14704301f015";
@@ -25,7 +27,24 @@ async function checkWeather(city) {
     humidity.innerHTML=data.main.humidity+"%";
     wind.innerHTML=data.wind.speed+"km/h";
 
-    
+
+    if (data.weather[0].main === "Clouds") {
+    weathericon.src = "images/clouds.png";
+} else if (data.weather[0].main === "Clear") {
+    weathericon.src = "images/clear.png";
+} else if (data.weather[0].main === "Drizzle") {
+    weathericon.src = "images/drizzle.png";
+} else if (data.weather[0].main === "Snow") {
+    weathericon.src = "images/snow.png";
+} else if (data.weather[0].main === "Rain") {
+    weathericon.src = "images/rain.png";
+} else if (data.weather[0].main === "Mist") {
+    weathericon.src = "images/mist.png";
+} else {
+    weathericon.src = "images/clear.png"; // fallback icon
+}
+
+
     document.querySelector(".weather-details").style.display="block";
     // document.querySelector(".temp").style.display="block-inline";
 
