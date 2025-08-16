@@ -161,8 +161,14 @@ button img{
     font-size: 25px;
     margin-top: -6px;
 }
-/* responsiveness */
-/* ...existing code... */
+
+.weather-details{
+    display: none;
+}
+
+/* .temp{
+    display: none;
+} */
 
 @media screen and (max-width: 740px) {
      body {
