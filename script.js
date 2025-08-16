@@ -19,8 +19,18 @@ async function checkWeather(city) {
     
     const response=await fetch(apiURL + city +`&appid=${api}`);
 
-    let data=await response.json();
-    console.log(data);
+
+    if(response.status === 404)
+    {
+        document.querySelector(".error").style.display="block";
+            document.querySelector(".weather-details").style.display="none";
+
+    }
+    else
+    {
+
+     let data=await response.json();
+    // console.log(data);
      curtemp=data.main.temp;
     document.querySelector(".city").innerHTML=data.name;
     temperature.innerHTML=Math.round(data.main.temp)+"°C";
@@ -29,25 +39,34 @@ async function checkWeather(city) {
 
 
     if (data.weather[0].main === "Clouds") {
-    weathericon.src = "images/clouds.png";
-} else if (data.weather[0].main === "Clear") {
-    weathericon.src = "images/clear.png";
-} else if (data.weather[0].main === "Drizzle") {
-    weathericon.src = "images/drizzle.png";
-} else if (data.weather[0].main === "Snow") {
-    weathericon.src = "images/snow.png";
-} else if (data.weather[0].main === "Rain") {
-    weathericon.src = "images/rain.png";
-} else if (data.weather[0].main === "Mist") {
-    weathericon.src = "images/mist.png";
-} else {
-    weathericon.src = "images/clear.png"; // fallback icon
-}
+        weathericon.src = "images/clouds.png";
+    } 
+    else if (data.weather[0].main === "Clear") {
+        weathericon.src = "images/clear.png";
+    } 
+    else if (data.weather[0].main === "Drizzle") {
+        weathericon.src = "images/drizzle.png";
+    } 
+    else if (data.weather[0].main === "Snow") {
+        weathericon.src = "images/snow.png";
+    } 
+    else if (data.weather[0].main === "Rain") {
+        weathericon.src = "images/rain.png";
+    } 
+    else if (data.weather[0].main === "Mist") {
+        weathericon.src = "images/mist.png";
+    } 
+    else {
+        weathericon.src = "images/clear.png"; 
+    }
 
+            document.querySelector(".error").style.display="none";
 
     document.querySelector(".weather-details").style.display="block";
     // document.querySelector(".temp").style.display="block-inline";
 
+    }
+    
 }
 
 searchBtn.addEventListener("click",function(event){

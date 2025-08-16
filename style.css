@@ -170,6 +170,17 @@ button img{
     display: none;
 } */
 
+
+.error {
+
+    text-align: left;
+    margin-left:10px ;
+    font-size: 14px;
+    color: rgb(255, 99, 99);
+    font-family: 'Courier New', Courier, monospace;
+    display: none;
+}
+
 @media screen and (max-width: 740px) {
      body {
         padding: 40px 0;
